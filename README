@@ -38,9 +38,9 @@ In order to get the sigrok-firmware source code and build it, run:
 
  $ git clone git://sigrok.org/sigrok-firmware
  $ cd sigrok-firmware
- $ ./autogen.sh
- $ ./configure
- $ make
+ $ mkdir build
+ $ cd build
+ $ cmake ..
 
 For installing sigrok-firmware:
 
@@ -50,11 +50,11 @@ This will install the files into /usr/local/share/sigrok-firmware per default.
 
 You can override the install directory like this:
 
-  $ ./configure --prefix=/usr
+  $ cmake -DCMAKE_INSTALL_PREFIX=/usr ..
 
-See INSTALL or the following wiki page for more (OS-specific) instructions:
+See the following wiki page for more (OS-specific) instructions:
 
- http://sigrok.org/wiki/Building
+ https://sigrok.org/wiki/Building
 
 
 Mailing list
@@ -72,5 +72,5 @@ You can find the sigrok developers in the #sigrok IRC channel on Freenode.
 Website
 -------
 
- http://sigrok.org/wiki/Firmware
+ https://sigrok.org/wiki/Firmware
 
